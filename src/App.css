@@ -1172,3 +1172,327 @@ footer p {
   cursor: not-allowed;
   transform: none;
 }
+/* =========================================================
+   LANDING PAGE MOBILE RESPONSIVE FIX
+   FUNCTIONALITY UNCHANGED
+========================================================= */
+
+@media (max-width: 850px) {
+  .navbar {
+    height: 70px;
+  }
+
+  .mobile-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    cursor: pointer;
+    z-index: 30;
+  }
+
+  .mobile-menu svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .nav-links,
+  .nav-actions {
+    display: none;
+  }
+
+  .hero {
+    width: calc(100% - 32px);
+    grid-template-columns: 1fr;
+    gap: 45px;
+    min-height: auto;
+    padding: 45px 0 75px;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero h1 {
+    font-size: clamp(43px, 9vw, 64px);
+    line-height: 1;
+    letter-spacing: -3px;
+  }
+
+  .hero-text {
+    width: 100%;
+    max-width: 590px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .trust-row {
+    justify-content: center;
+  }
+
+  .hero-chat {
+    width: 100%;
+    padding: 0 5px;
+  }
+
+  .chat-window {
+    width: 100%;
+    max-width: 430px;
+    transform: none;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pricing-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   MOBILE NAV MENU
+========================================================= */
+
+@media (max-width: 850px) {
+  .navbar {
+    position: relative;
+  }
+
+  .navbar.mobile-open .nav-links,
+  .navbar.mobile-open .nav-actions {
+    display: flex;
+  }
+
+  .navbar.mobile-open .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+
+    padding: 10px 0;
+
+    background: rgba(10, 11, 16, 0.97);
+    border: 1px solid #242631;
+    border-radius: 14px;
+
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  }
+
+  .navbar.mobile-open .nav-links a {
+    width: 100%;
+    padding: 14px 20px;
+    text-align: center;
+  }
+
+  .navbar.mobile-open .nav-actions {
+    position: absolute;
+    top: 255px;
+    left: 0;
+    right: 0;
+
+    justify-content: center;
+
+    padding: 12px;
+
+    background: rgba(10, 11, 16, 0.97);
+    border: 1px solid #242631;
+    border-top: 0;
+    border-radius: 0 0 14px 14px;
+
+    backdrop-filter: blur(20px);
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 520px) {
+  .navbar,
+  .hero,
+  .section,
+  footer {
+    width: calc(100% - 28px);
+  }
+
+  .navbar {
+    height: 64px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .logo-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .mobile-menu {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar.mobile-open .nav-links {
+    top: 64px;
+  }
+
+  .navbar.mobile-open .nav-actions {
+    top: 249px;
+  }
+
+  .hero {
+    gap: 35px;
+    padding-top: 35px;
+    padding-bottom: 60px;
+  }
+
+  .hero h1 {
+    font-size: clamp(38px, 12vw, 50px);
+    letter-spacing: -2px;
+  }
+
+  .hero-text {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+  }
+
+  .trust-row {
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .chat-window {
+    max-width: 100%;
+    border-radius: 16px;
+  }
+
+  .chat-body {
+    padding: 17px;
+    min-height: 350px;
+  }
+
+  .message {
+    max-width: 88%;
+    font-size: 11px;
+  }
+
+  .suggestions {
+    overflow-x: auto;
+    padding-bottom: 3px;
+  }
+
+  .suggestions button {
+    white-space: nowrap;
+  }
+
+  .section {
+    padding: 70px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 38px;
+  }
+
+  .section-heading h2 {
+    font-size: 32px;
+    letter-spacing: -1.5px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    padding: 22px;
+  }
+
+  .step {
+    grid-template-columns: 50px 1fr;
+    padding: 22px 17px;
+    gap: 10px;
+  }
+
+  .pricing-card {
+    padding: 25px 20px;
+    gap: 25px;
+  }
+
+  .pricing-card h3 {
+    font-size: 40px;
+  }
+
+  footer {
+    padding: 30px 0 40px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: 36px;
+    letter-spacing: -1.8px;
+  }
+
+  .hero-text {
+    font-size: 13px;
+  }
+
+  .chat-header {
+    padding: 14px;
+  }
+
+  .chat-body {
+    min-height: 320px;
+    padding: 14px;
+  }
+
+  .pricing-card h3 {
+    font-size: 36px;
+  }
+}
