@@ -83,9 +83,9 @@ function Payment() {
     try {
       setSubmitting(true);
 
-      const response = await fetch(
-        "http://localhost:5000/api/payment/submit",
-        {
+     const response = await fetch(
+  `${import.meta.env.VITE_API_URL}/api/payment/submit`,
+  {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

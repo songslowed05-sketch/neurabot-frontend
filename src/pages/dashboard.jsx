@@ -208,8 +208,8 @@ const token = localStorage.getItem("token");
 if (token) {
   try {
     const subscriptionResponse = await fetch(
-      "http://localhost:5000/api/payment/my-status",
-      {
+  `${import.meta.env.VITE_API_URL}/api/payment/my-status`,
+  {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,

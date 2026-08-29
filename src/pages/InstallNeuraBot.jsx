@@ -23,8 +23,8 @@ export default function InstallNeuraBot() {
         localStorage.getItem("authToken");
 
       const response = await axios.get(
-        "http://localhost:5000/api/widget-install/code",
-        {
+  `${import.meta.env.VITE_API_URL}/api/widget-install/code`,
+  {
           headers: {
             Authorization: `Bearer ${token}`,
           },
