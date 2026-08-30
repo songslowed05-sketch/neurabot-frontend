@@ -12,12 +12,13 @@ import {
   Globe,
   Mail,
   MapPin,
-  Phone,
+  Menu,
   Plus,
   Save,
   Sparkles,
   Trash2,
   UserRound,
+  X,
   Zap,
 } from "lucide-react";
 
@@ -70,7 +71,7 @@ const plans = [
 function Dashboard() {
   const [categoryOpen, setCategoryOpen] = useState(false);
   const navigate = useNavigate();
-
+const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loadingBusiness, setLoadingBusiness] = useState(true);
   const [savingBusiness, setSavingBusiness] = useState(false);
 
@@ -560,6 +561,20 @@ if (token) {
 
   return (
     <div className="dashboard-page">
+    <button
+  type="button"
+  className="dashboard-mobile-menu"
+  onClick={() => setMobileMenuOpen((prev) => !prev)}
+  aria-label="Toggle dashboard menu"
+>
+  {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+</button>
+
+<aside
+  className={`dashboard-sidebar ${
+    mobileMenuOpen ? "mobile-sidebar-open" : ""
+  }`}
+></aside>
       <div className="dashboard-glow dashboard-glow-one" />
       <div className="dashboard-glow dashboard-glow-two" />
 

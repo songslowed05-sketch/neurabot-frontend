@@ -50,7 +50,7 @@ const demoReplies = {
 
 function LandingPage() {
   const [demoOpen, setDemoOpen] = useState(false);
-
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [messages, setMessages] = useState([
     {
       id: 1,
@@ -223,12 +223,62 @@ function LandingPage() {
         </div>
 
         <button
-          type="button"
-          className="mobile-menu"
-        >
-          <Menu size={23} />
-        </button>
+  type="button"
+  className="mobile-menu"
+  onClick={() => setMobileMenuOpen((prev) => !prev)}
+  aria-label="Toggle navigation menu"
+>
+  {mobileMenuOpen ? <X size={23} /> : <Menu size={23} />}
+</button>
 
+{mobileMenuOpen && (
+  <div className="mobile-nav-menu">
+    <a
+      href="#features"
+      onClick={() => setMobileMenuOpen(false)}
+    >
+      Features
+    </a>
+
+    <a
+      href="#how"
+      onClick={() => setMobileMenuOpen(false)}
+    >
+      How it works
+    </a>
+
+    <a
+      href="#pricing"
+      onClick={() => setMobileMenuOpen(false)}
+    >
+      Pricing
+    </a>
+
+    <a
+      href="#faq"
+      onClick={() => setMobileMenuOpen(false)}
+    >
+      FAQ
+    </a>
+
+    <Link
+      to="/login"
+      className="mobile-login"
+      onClick={() => setMobileMenuOpen(false)}
+    >
+      Login
+    </Link>
+
+    <Link
+      to="/signup"
+      className="mobile-signup"
+      onClick={() => setMobileMenuOpen(false)}
+    >
+      Get Started
+      <ArrowRight size={15} />
+    </Link>
+  </div>
+)}
       </nav>
 
       {/* =========================================
