@@ -10,10 +10,11 @@ import {
   Clock3,
   CreditCard,
   Globe,
-  Mail,
-  MapPin,
-  Menu,
-  Plus,
+ Mail,
+MapPin,
+Menu,
+Phone,
+Plus,
   Save,
   Sparkles,
   Trash2,
@@ -569,18 +570,16 @@ if (token) {
 >
   {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
 </button>
-
-<aside
-  className={`dashboard-sidebar ${
-    mobileMenuOpen ? "mobile-sidebar-open" : ""
-  }`}
-></aside>
       <div className="dashboard-glow dashboard-glow-one" />
       <div className="dashboard-glow dashboard-glow-two" />
 
       {/* SIDEBAR */}
 
-      <aside className="dashboard-sidebar">
+     <aside
+  className={`dashboard-sidebar ${
+    mobileMenuOpen ? "mobile-sidebar-open" : ""
+  }`}
+>
         <div className="dashboard-brand">
           <div className="dashboard-logo-icon">
             <Bot size={22} />
